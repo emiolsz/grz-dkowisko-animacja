@@ -170,18 +170,14 @@ p {
 
 @keyframes naturalHeroReveal {
   0% {
-    opacity: 0;
-    filter: blur(22px) saturate(0.75);
-    transform: scale(1.1);
-  }
-
-  45% {
-    opacity: 0.72;
+    opacity: 1;
+    filter: blur(10px) saturate(0.85);
+    transform: scale(1.04);
   }
 
   100% {
     opacity: 1;
-    filter: blur(0) saturate(1);
+    filter: blur(0);
     transform: scale(1);
   }
 }
