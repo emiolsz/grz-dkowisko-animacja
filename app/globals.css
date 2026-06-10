@@ -56,12 +56,19 @@ main {
   position: absolute;
   inset: 0;
   z-index: 1;
+  pointer-events: none;
   background:
     linear-gradient(
       to right,
-      rgba(247, 244, 238, 0.94) 0%,
-      rgba(247, 244, 238, 0.72) 42%,
-      rgba(247, 244, 238, 0.2) 100%
+      rgba(247, 244, 238, 0.92) 0%,
+      rgba(247, 244, 238, 0.66) 42%,
+      rgba(247, 244, 238, 0.14) 100%
+    ),
+    linear-gradient(
+      to top,
+      rgba(247, 244, 238, 0.18) 0%,
+      rgba(247, 244, 238, 0.08) 34%,
+      rgba(247, 244, 238, 0) 70%
     );
 }
 
@@ -198,9 +205,9 @@ p {
     background:
       linear-gradient(
         to top,
-        rgba(247, 244, 238, 0.96) 0%,
-        rgba(247, 244, 238, 0.74) 48%,
-        rgba(247, 244, 238, 0.22) 100%
+        rgba(247, 244, 238, 0.92) 0%,
+        rgba(247, 244, 238, 0.58) 48%,
+        rgba(247, 244, 238, 0.14) 100%
       );
   }
 
