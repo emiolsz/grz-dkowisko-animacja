@@ -27,6 +27,12 @@ export default function HomePage() {
           className="heroImage"
         />
 
+        <div className="heroMist" />
+
+        <div className="heroLogoAnimation" aria-label="Grządkowisko">
+          <div className="animatedLogoText">Grządkowisko</div>
+        </div>
+
         <div className="heroContent">
           <p className="label">Atlas zależności przyrodniczych</p>
 
