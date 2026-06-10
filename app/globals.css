@@ -166,6 +166,88 @@ p {
   margin: 0;
 }
 
+/* INTRO LOGO + ANIMACJA GROSZKU */
+
+.introLogoScene {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: #eadcc6;
+  overflow: hidden;
+  pointer-events: none;
+  animation: introDisappear 11s ease forwards;
+}
+
+.introLogoImage {
+  object-fit: cover;
+}
+
+.peaIntroAnimation {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 55;
+  pointer-events: none;
+}
+
+.peaSeed {
+  fill: #6f7c4f;
+  opacity: 0;
+  transform-origin: center;
+  animation: seedAppear 9s ease forwards;
+}
+
+.peaStem {
+  fill: none;
+  stroke: #65704f;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1600;
+  stroke-dashoffset: 1600;
+  opacity: 0;
+  animation: stemGrow 9s ease forwards;
+}
+
+.peaLeaf {
+  fill: #65704f;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: leafLife 9s ease forwards;
+}
+
+.leaf1 {
+  animation-delay: 2.6s;
+}
+
+.leaf2 {
+  animation-delay: 3.3s;
+}
+
+.leaf3 {
+  animation-delay: 4s;
+}
+
+.peaPod {
+  fill: #75835a;
+  stroke: #4f5a3e;
+  stroke-width: 3;
+  opacity: 0;
+  transform-origin: center;
+  animation: podLife 9s ease forwards;
+}
+
+.finalPea {
+  fill: #6f7c4f;
+  stroke: #4f5a3e;
+  stroke-width: 3;
+  opacity: 0;
+  transform-origin: center;
+  animation: finalPeaLife 9s ease forwards;
+}
+
 /* ANIMACJE */
 
 @keyframes naturalHeroReveal {
@@ -186,6 +268,143 @@ p {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes seedAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+
+  10% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes stemGrow {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: 1600;
+    stroke: #65704f;
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  55% {
+    stroke-dashoffset: 0;
+    stroke: #65704f;
+  }
+
+  78% {
+    stroke: #9b7a52;
+    opacity: 0.6;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke: #b08a5f;
+    opacity: 0;
+  }
+}
+
+@keyframes leafLife {
+  0% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+
+  30% {
+    opacity: 1;
+    transform: scale(1);
+    fill: #65704f;
+  }
+
+  70% {
+    fill: #8a7b4e;
+    opacity: 0.8;
+  }
+
+  100% {
+    fill: #b08a5f;
+    opacity: 0;
+    transform: scale(0.6);
+  }
+}
+
+@keyframes podLife {
+  0%,
+  50% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+
+  65% {
+    opacity: 1;
+    transform: scale(1);
+    fill: #75835a;
+  }
+
+  82% {
+    fill: #a07b50;
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+}
+
+@keyframes finalPeaLife {
+  0%,
+  78% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  90% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes introDisappear {
+  0% {
+    opacity: 1;
+    filter: blur(0);
+  }
+
+  72% {
+    opacity: 1;
+    filter: blur(0);
+  }
+
+  88% {
+    opacity: 1;
+    filter: blur(12px);
+  }
+
+  100% {
+    opacity: 0;
+    filter: blur(28px);
+    visibility: hidden;
   }
 }
 
@@ -220,8 +439,4 @@ p {
     padding: 18px 20px;
     font-size: 1rem;
   }
-.introLogoScene {
-  position: fixed;
-  inset: 0;
-  z-index: 50;
-  }
+}
