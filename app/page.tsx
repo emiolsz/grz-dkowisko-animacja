@@ -29,8 +29,57 @@ export default function HomePage() {
 
         <div className="heroMist" />
 
-        <div className="heroLogoAnimation" aria-label="Grządkowisko">
-          <div className="animatedLogoText">Grządkowisko</div>
+        <div className="heroLogoAnimation" aria-hidden="true">
+          <svg
+            className="peaAnimationSvg"
+            viewBox="0 0 900 260"
+            role="img"
+            aria-label="Animacja groszku oplatającego napis Grządkowisko"
+          >
+            <circle className="peaSeed" cx="38" cy="198" r="8" />
+
+            <path
+              className="peaStem"
+              d="M 38 198
+                 C 65 160, 55 120, 100 95
+                 C 150 66, 190 94, 214 122
+                 C 246 160, 204 188, 170 160
+                 C 132 128, 178 78, 244 74
+                 C 330 68, 390 130, 470 112
+                 C 560 92, 620 58, 704 92
+                 C 770 118, 812 150, 848 128"
+            />
+
+            <path
+              className="peaTendril"
+              d="M 214 122
+                 C 238 86, 282 94, 270 128
+                 C 260 154, 224 148, 236 118"
+            />
+
+            <ellipse className="peaLeaf peaLeafOne" cx="125" cy="104" rx="20" ry="10" />
+            <ellipse className="peaLeaf peaLeafTwo" cx="338" cy="88" rx="22" ry="11" />
+            <ellipse className="peaLeaf peaLeafThree" cx="585" cy="78" rx="24" ry="12" />
+
+            <circle className="peaFlower peaFlowerOne" cx="470" cy="112" r="9" />
+            <circle className="peaFlower peaFlowerTwo" cx="704" cy="92" r="9" />
+
+            <path
+              className="peaPod peaPodOne"
+              d="M 505 118
+                 C 545 100, 584 110, 604 136
+                 C 560 152, 526 146, 505 118 Z"
+            />
+
+            <path
+              className="peaPod peaPodTwo"
+              d="M 706 98
+                 C 746 82, 786 94, 804 120
+                 C 764 134, 728 126, 706 98 Z"
+            />
+
+            <circle className="finalPea" cx="838" cy="132" r="11" />
+          </svg>
         </div>
 
         <div className="heroContent">
